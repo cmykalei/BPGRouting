@@ -1,0 +1,15 @@
+bgp community-list PEERS permit 29:122
+bgp community-list PEERS permit 29:30
+bgp community-list CUSTOMERS permit 29:31
+bgp community-list CUSTOMERS permit 29:32
+bgp community-list PROVIDERS permit 29:28
+bgp community-list PROVIDERS permit 29:27
+
+route-map IXP_in permit 10
+set community 29:122
+
+route-map IXP_out permit 10
+match community PEERS
+
+neighbor 180.122.0.122 route-map IXP_in in
+neighbor 180.122.0.122 route-map IXP_out out

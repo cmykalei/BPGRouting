@@ -1,0 +1,109 @@
+kaleiesteves@MacAir: scripts $ ./update.sh route
+
+No 'route_map' configuration for LOND
+LOND > 'exit'
+can't find window: LOND
+
+Updating 'route_map' config for HAML...
+HAML > './goto.sh HAML'
+HAML > 'configure terminal'
+HAML > 'route-map FROM_CUSTOMERS permit 10'
+HAML > 'match community 29:32 29:31'
+HAML > 'set community 29:60'
+HAML > 'route-map FROM_PROVIDERS permit 10'
+HAML > 'match community 29:28 29:27'
+HAML > 'set community 29:80'
+HAML > 'router bgp 29'
+HAML > 'route-map TO_PROVIDERS permit 10'
+HAML > 'match community 29:60'
+HAML > 'set community 122:2 122:4 122:6 122:8 122:10 122:12 122:14 122:16'
+HAML > 'neighbor 179.28.29.1 route-map FROM_PROVIDERS in'
+HAML > 'neighbor 179.28.29.1 route-map TO_PROVIDERS out'
+HAML > 'exit'
+
+Updating 'route_map' config for PARI...
+PARI > './goto.sh PARI'
+PARI > 'configure terminal'
+PARI > 'route-map FROM_CUSTOMERS permit 10'
+PARI > 'match community 29:32 29:31'
+PARI > 'set community 29:60'
+PARI > 'route-map FROM_PEERS permit 10'
+PARI > 'match community 29:28 29:27'
+PARI > 'set community 29:80'
+PARI > 'router bgp 29'
+PARI > 'route-map TO_PEERS permit 10'
+PARI > 'match community 29:60'
+PARI > 'set community 122:2 122:4 122:6 122:8 122:10 122:12 122:14 122:16'
+PARI > 'neighbor 179.29.30.2 route-map FROM_PEERS in'
+PARI > 'neighbor 179.29.30.2 route-map TO_PEERS out'
+PARI > 'exit'
+
+No 'route_map' configuration for TRGA
+TRGA > 'exit'
+can't find window: TRGA
+
+Updating 'route_map' config for NEWY...
+NEWY > './goto.sh NEWY'
+NEWY > 'configure terminal'
+NEWY > 'route-map FROM_CUSTOMERS permit 10'
+NEWY > 'match community 29:32 29:31'
+NEWY > 'set community 29:60'
+NEWY > 'route-map FROM_PEERS permit 10'
+NEWY > 'match community 29:30 29:122'
+NEWY > 'set community 29:70'
+NEWY > 'route-map TO_PEERS permit 10'
+NEWY > 'match community 29:60'
+NEWY > 'set community 122:2 122:4 122:6 122:8 122:10 122:12 122:14 122:16'
+NEWY > 'route-map FROM_PROVIDERS permit 10'
+NEWY > 'match community 29:28 29:27'
+NEWY > 'set community 29:80'
+NEWY > 'router bgp 29'
+NEWY > 'neighbor 180.122.0.122 route-map FROM_PEERS in'
+NEWY > 'neighbor 180.122.0.122 route-map TO_PEERS out'
+NEWY > 'exit'
+
+Updating 'route_map' config for BOST...
+BOST > './goto.sh BOST'
+BOST > 'configure terminal'
+BOST > 'route-map FROM_CUSTOMERS permit 10'
+BOST > 'match community 29:32 29:31'
+BOST > 'set community 29:60'
+BOST > 'route-map FROM_PROVIDERS permit 10'
+BOST > 'match community 29:28 29:27'
+BOST > 'set community 29:80'
+BOST > 'route-map TO_PROVIDERS permit 10'
+BOST > 'match community 29:60'
+BOST > 'set community 122:2 122:4 122:6 122:8 122:10 122:12 122:14 122:16'
+BOST > 'router bgp 29'
+BOST > 'neighbor 179.27.29.1 route-map FROM_PROVIDERS in'
+BOST > 'neighbor 179.27.29.1 route-map TO_PROVIDERS out'
+BOST > 'exit'
+
+Updating 'route_map' config for ATLA...
+ATLA > './goto.sh ATLA'
+ATLA > 'configure terminal'
+ATLA > 'route-map FROM_CUSTOMERS permit 10'
+ATLA > 'match community 29:32 29:31'
+ATLA > 'set community 29:60'
+ATLA > 'route-map TO_CUSTOMERS permit 10'
+ATLA > 'set community 29:60 29:70 29:80'
+ATLA > 'router bgp 29'
+ATLA > 'neighbor 179.29.32.2 route-map FROM_CUSTOMERS in'
+ATLA > 'neighbor 179.29.32.2 route-map TO_CUSTOMERS out'
+ATLA > 'exit'
+
+Updating 'route_map' config for ZURI...
+ZURI > './goto.sh ZURI'
+ZURI > 'configure terminal'
+ZURI > 'route-map FROM_CUSTOMERS permit 10'
+ZURI > 'match community 29:32 29:31'
+ZURI > 'set community 29:60'
+ZURI > 'route-map TO_CUSTOMERS permit 10'
+ZURI > 'set community 29:60 29:70 29:80'
+ZURI > 'router bgp 29'
+ZURI > 'neighbor 179.29.31.2 route-map FROM_CUSTOMERS in'
+ZURI > 'neighbor 179.29.31.2 route-map TO_CUSTOMERS out'
+ZURI > 'exit'
+
+Configuration updated successfully on all routers.
+kaleiesteves@MacAir: scripts $ 

@@ -1,0 +1,35 @@
+configure terminal
+bgp community-list standard CUSTOMERS seq 5 permit 29:32
+bgp community-list standard CUSTOMERS seq 6 permit 29:31
+bgp community-list standard PEERS seq 5 permit 29:122
+bgp community-list standard PEERS seq 6 permit 29:30
+bgp community-list standard PROVIDERS seq 5 permit 29:27
+bgp community-list standard PROVIDERS seq 6 permit 29:28
+route-map FROM_CUSTOMER permit 10
+match community CUSTOMERS
+set community 29:60
+route-map FROM_PEER permit 10
+match community PEERS
+set community 29:70
+route-map FROM_PROVIDER permit 10
+match community PROVIDERS
+set community 29:80
+route-map TO_CUSTOMER permit 10
+set community 29:31 29:32
+route-map TO_PEER deny 10
+match community PEERS
+route-map TO_PEER deny 20
+match community PROVIDERS
+route-map TO_PEER permit 30
+match community CUSTOMERS
+set community 122:2 122:4 122:6 122:8 122:10 122:12 122:14 122:16
+route-map TO_PROVIDER deny 10
+match community PROVIDERS
+route-map TO_PROVIDER deny 20
+match community PEERS
+route-map TO_PROVIDER permit 30
+match community CUSTOMERS
+set community 29:27 29:28
+router bgp 29
+neighbor 179.27.29.1 route-map FROM_PROVIDER in
+neighbor 179.27.29.1 route-map TO_PROVIDER out

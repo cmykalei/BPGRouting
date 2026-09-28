@@ -1,0 +1,6 @@
+configure terminal
+route-map ALLOW_ALL permit 29
+exit
+router bgp 29
+neighbor 180.122.0.122 route-map ALLOW_ALL in
+neighbor 180.122.0.122 route-map ALLOW_ALL out

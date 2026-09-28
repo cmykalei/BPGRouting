@@ -1,0 +1,20 @@
+show ip bgp summary
+
+IPv4 Unicast Summary (VRF default):
+BGP router identifier 29.158.0.1, local AS number 29 vrf-id 0
+BGP table version 57
+RIB entries 113, using 20 KiB of memory
+Peers 8, using 5732 KiB of memory
+
+Neighbor        V         AS   MsgRcvd   MsgSent   TblVer  InQ OutQ  Up/Down State/PfxRcd   PfxSnt Desc
+29.151.0.1      4         29       697       697        0    0    0 11:34:55            0        0 N/A
+29.152.0.1      4         29       697       697        0    0    0 11:34:54            0        0 N/A
+29.153.0.1      4         29       697       697        0    0    0 11:34:53            0        0 N/A
+29.154.0.1      4         29       697       697        0    0    0 11:34:52            0        0 N/A
+29.155.0.1      4         29       738       697        0    0    0 11:34:51           57        0 N/A
+29.156.0.1      4         29       697       697        0    0    0 11:34:50            0        0 N/A
+29.157.0.1      4         29       697       697        0    0    0 11:34:49            0        0 N/A
+179.29.31.2     4         31        33        32        0    0    0 00:29:10     (Policy) (Policy) N/A
+
+Total number of neighbors 8
+ZURI_router# 

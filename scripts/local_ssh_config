@@ -1,0 +1,2 @@
+SSH_KEY="/Users/$USER/.ssh/id_rsa"
+SSH_ALIAS="mini-internet"

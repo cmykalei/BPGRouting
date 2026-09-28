@@ -1,0 +1,57 @@
+kaleiesteves@MacAir: scripts $ ./update.sh ebgp
+
+No 'ebgp_config' configuration for LOND
+LOND > 'exit'
+can't find window: LOND
+
+Updating 'ebgp_config' config for HAML...
+HAML > './goto.sh HAML'
+HAML > 'configure terminal'
+HAML > 'router bgp 29'
+HAML > 'neighbor 179.28.29.1 remote-as 28'
+HAML > 'exit'
+
+Updating 'ebgp_config' config for PARI...
+PARI > './goto.sh PARI'
+PARI > 'configure terminal'
+PARI > 'router bgp 29'
+PARI > 'neighbor 179.29.30.2 remote-as 30'
+PARI > 'exit'
+
+No 'ebgp_config' configuration for TRGA
+TRGA > 'exit'
+can't find window: TRGA
+
+Updating 'ebgp_config' config for NEWY...
+NEWY > './goto.sh NEWY'
+NEWY > 'configure terminal'
+NEWY > 'route-map ALLOW_ALL permit 29'
+NEWY > 'exit'
+NEWY > 'router bgp 29'
+NEWY > 'neighbor 180.122.0.122 route-map ALLOW_ALL in'
+NEWY > 'neighbor 180.122.0.122 route-map ALLOW_ALL out'
+NEWY > 'exit'
+
+Updating 'ebgp_config' config for BOST...
+BOST > './goto.sh BOST'
+BOST > 'configure terminal'
+BOST > 'router bgp 29'
+BOST > 'neighbor 179.27.29.1 remote-as 27'
+BOST > 'exit'
+
+Updating 'ebgp_config' config for ATLA...
+ATLA > './goto.sh ATLA'
+ATLA > 'configure terminal'
+ATLA > 'router bgp 29'
+ATLA > 'neighbor 179.29.32.2 remote-as 32'
+ATLA > 'exit'
+
+Updating 'ebgp_config' config for ZURI...
+ZURI > './goto.sh ZURI'
+ZURI > 'configure terminal'
+ZURI > 'router bgp 29'
+ZURI > 'neighbor 179.29.31.2 remote-as 31'
+ZURI > 'exit'
+
+Configuration updated successfully on all routers.
+kaleiesteves@MacAir: scripts $ 

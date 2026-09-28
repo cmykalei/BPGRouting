@@ -1,0 +1,63 @@
+CUSTOMER 💳
+AS 29 / BOST
+179.27.29.2/30
+179.27.29.2/30
+<>
+PROVIDER 🎩
+AS 27 / ZURI
+179.27.29.1/30
+
+BOST_router# conf t
+BOST_router(config)# interface 
+BOST_router(config)# interface ext_27_ZURI 
+BOST_router(config-if)# ip address 179.27.29.2/30
+
+
+CUSTOMER 💳
+AS 29 / HAML
+179.28.29.2/30
+179.28.29.2/30
+<>
+PROVIDER 🎩
+AS 28 / ZURI
+179.28.29.1/30
+
+
+PEER 🤝
+AS 29 / PARI
+179.29.30.1/30
+179.29.30.1/30
+<>
+PEER 🤝
+AS 30 / PARI
+179.29.30.2/30
+
+
+PROVIDER 🎩
+AS 29 / ZURI
+179.29.31.1/30
+179.29.31.1/30
+<>
+CUSTOMER 💳
+AS 31 / ZURI
+179.29.31.2/30
+
+
+PROVIDER 🎩
+AS 29 / ATLA
+179.29.32.1/30
+179.29.32.1/30
+<>
+CUSTOMER 💳
+AS 32 / ZURI
+179.29.32.2/30
+
+
+PEER 🤝
+AS 29 / NEWY
+180.122.0.29/24
+180.122.0.29/24
+<>
+PEER 🤝
+AS 122 / IXP
+180.122.0.122/24
